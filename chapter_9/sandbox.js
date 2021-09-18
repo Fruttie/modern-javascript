@@ -12,6 +12,8 @@ const products = [
 //   return `the ${product.name} is ${product.price / 2} pounds`;
 // });
 
+
+//take advantage of array chaining:
 const promos = products
   .filter(product => product.price > 20)
   .map(product => `the ${product.name} is ${product.price / 2} pounds`);
