@@ -15,5 +15,8 @@ input[type=text]:focus{
   background: #423a6f;
 }
 .delete{
-  cursor: pointer;
+  cursor: pointer; 
+}
+.filtered{
+  display: none !important;
 }
