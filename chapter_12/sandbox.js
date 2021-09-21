@@ -17,7 +17,7 @@ const getTodos = (resource, callback) => {
   request.send();
 
 };
-
+//callback hell!!! :D
 getTodos('json/luigi.json', (err, data) => {
   console.log(data);
   getTodos('json/mario.json', (err, data) => {
