@@ -26,22 +26,30 @@ getTodos('json/luigi.json').then(data => {
   console.log('promise rejected:', err);
 });
 
-// promise example
-const getSomething = () => {
 
-  return new Promise((resolve, reject) => {
-    // do something (fetch data)
-    // resolve('some data');
-    reject('some error');
-  });
 
-};
+// // promise example:
+
+// const getSomething = () => {
+
+//   return new Promise((resolve, reject) => {
+//     // do something (fetch data)
+//     // resolve('some data');
+//     reject('some error');
+//   });
+
+// };
+
+//this can be a little messy still to read:
 
 // getSomething().then(data => {
 //   console.log('promise resolved:', data);
 // }, err => {
 //   console.log('promise rejected:', err);
 // });
+
+
+//this is better to do, more readable:
 
 // getSomething().then(data => {
 //   console.log('promise resolved:', data);
