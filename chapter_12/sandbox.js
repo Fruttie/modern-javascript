@@ -12,7 +12,7 @@ const getTodos = (callback) => {
     }
 
   });
-  
+  //we could get here the json file that we made:
   request.open('GET', 'todos.json');
   request.send();
 
