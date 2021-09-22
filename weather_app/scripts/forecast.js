@@ -1,27 +1,33 @@
-const key = '	xvpOBAAypFh84YftzPvUCh8ZM80gbYIG';
+const key = 'VJ4cFAECsjhynNdFRiZ7zGgI52SBpAI3';
 
-// get weather information
+//get weather information
 const getWeather = async (id) => {
-  
-  const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
-  const query = `${id}?apikey=${key}`;
 
-  const response = await fetch(base + query);
-  const data = await response.json();
+    const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
+    const query = `${id}?apikey=${key}`;
 
-  return data[0];
+    const response = await fetch(base + query);
+    const data = await response.json();
+
+    return data[0];
 
 };
 
-// get city information
+//get city information
 const getCity = async (city) => {
 
-  const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
-  const query = `?apikey=${key}&q=${city}`;
+    //the base URL of the api endpoint that we want to make a request to
+    const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
+    const query = `?apikey=${key}&q=${city}`;
 
-  const response = await fetch(base + query);
-  const data = await response.json();
+    const response = await fetch(base + query);
+    const data = await response.json();
 
-  return data[0];
-
+    return data[0];
 };
+
+// getCity('budapest').then(data => {
+//     return getWeather(data.Key)
+// }).then(data => {
+//     console.log(data);
+// }).catch(err => console.log(err));
